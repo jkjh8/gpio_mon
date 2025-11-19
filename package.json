@@ -1,0 +1,52 @@
+{
+  "name": "m-monitor",
+  "version": "1.0.0",
+  "description": "Multicast GPIO Monitor Application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron dev",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:dir": "electron-builder --dir"
+  },
+  "build": {
+    "appId": "com.mmonitor.app",
+    "productName": "M Monitor",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer.js",
+      "index.html",
+      "styles.css",
+      "public/**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "public/favicon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "keywords": [
+    "electron",
+    "multicast",
+    "gpio",
+    "monitor"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^26.0.12"
+  }
+}

@@ -1,0 +1,51 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>M Monitor</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="public/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h2>🔌 M Monitor</h2>
+        <div class="button-group">
+          <button
+            id="getBtn"
+            class="btn-primary">
+            GET
+          </button>
+          <button
+            id="clearBtn"
+            class="btn-secondary">
+            CLEAR
+          </button>
+        </div>
+      </header>
+
+      <div class="devices-section">
+        <h2>검색된 디바이스 목록</h2>
+        <div
+          id="devicesList"
+          class="devices-list">
+          <p class="no-devices">
+            검색된 디바이스가 없습니다. GET 버튼을 눌러 검색하세요.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
