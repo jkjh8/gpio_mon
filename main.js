@@ -50,7 +50,6 @@ function createWindow() {
   mainWindow.loadFile('index.html')
 
   // 개발자 도구 열기 (개발 중)
-  mainWindow.webContents.openDevTools()
 }
 
 // UDP 멀티캐스트 소켓 초기화
